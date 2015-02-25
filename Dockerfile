@@ -1,6 +1,6 @@
 FROM ubuntu:saucy
 
-MAINTAINER Sebastien Rozange <srozange@gmail.com>
+MAINTAINER Jacques Chirac <jacques.chirac@gmail.com>
 
 # Update Ubuntu
 RUN apt-get update && apt-get -y upgrade
@@ -30,7 +30,7 @@ RUN apt-get clean
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Betarss
-RUN git clone https://github.com/srozange/betarss
+RUN git clone https://github.com/theglump/betarss
 RUN cd betarss && mvn clean package
 
 # Deploy war
